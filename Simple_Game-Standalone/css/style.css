@@ -1,119 +1,235 @@
 html {
-      font-family:Arial, Calibri;
-      background:#e2e2e2;
-      color:#36393f;
-      margin:0;
-      padding:0;
-      }
+  font-family: Arial, Calibri;
+  background: #e2e2e2;
+  color: #36393f;
+  margin: 0;
+  padding: 0;
+}
 
 body {
-      margin:0;
-      padding:0;
-      }
+  margin: 0;
+  padding: 0;
+}
 
-h1, h4   {
-          color:#2d2d2d;
-          }
+h1,h4 {
+  color: #2d2d2d;
+}
+
+nav {
+  width: 100%;
+  height: 50px;
+  background: #d300d3;
+  display: block;
+}
+
+nav ul {
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li {
+  position: relative;
+  list-style: none;
+  height: 25px;
+  padding: 15px 0px 10px 0px;
+  width: 150px;
+  border-right: 1px solid grey;
+  text-align: center;
+  float: left;
+  color: #e2e2e2;
+}
+
+nav ul li {
+  transition: all 300ms;
+  -moz-transition: all 300ms;
+  -ms-transition: all 300ms;
+  -o-transition: all 300ms;
+  -webkit-transition: all 300ms;
+}
+
+nav ul li:hover {
+  background: grey;
+}
+
+nav ul li a, nav ul li {
+  color: #fff;
+  text-decoration: none;
+  letter-spacing: 1px;
+}
+
+nav ul li ul {
+  position: absolute;
+  top: 0px;
+  left: -1px;
+  background: #d300d3;
+  display: none;
+}
+
+nav ul li ul li {
+  border-bottom: 1px solid grey;
+  border-left: 1px solid grey;
+}
+
+#btnd {
+  background-color: #d300d3;
+  position: relative;
+  top: -15px;
+  border: none;
+  width: 100%;
+  height: 50px;
+  font-size: 16px;
+  color: #e2e2e2;
+}
+
+#btnd:hover {
+  background-color: grey;
+  color: #2d2d2d;
+  cursor: pointer;
+}
+
+#btnw {
+  background-color: #d300d3;
+  position: relative;
+  top: -15px;
+  border: none;
+  width: 100%;
+  height: 50px;
+  font-size: 16px;
+  color: #e2e2e2;
+}
+
+#btnw:hover {
+  background-color: grey;
+  color: #2d2d2d;
+  cursor: pointer;
+}
 
 #con1 {
-       text-align:left;
-	   font-size:18px;
-       float:left;
-       padding:10px;
-       width:45%;
-       height:auto;
-       }
+  text-align: left;
+  float: left;
+  padding: 15px;
+  width: 45%;
+  min-height: 1000px;
+  max-height: auto;
+}
 
-#game {
-       width:500px;
-       height:200px;
-       background-image:url("../img/background.png");
-       border:1px solid black;
-       position:absolute;
-       z-index:1;
-       }
+#con2 {
+  text-align: left;
+  float: right;
+  padding: 15px;
+  width: 45%;
+  height: auto;
+}
 
-#character {
-            width:20px;
-            height:50px;
-            background-image:url("../img/character.png");
-            position:relative;
-            top:150px;
-            left:10px;
-            z-index:5;
-            }
+#con3 {
+  text-align: left;
+  float: left;
+  padding: 15px;
+  width: 30%;
+  height: 450px;
+}
 
-.animate{
-         animation:jump 500ms;
-         }
+#con03 {
+  text-align: left;
+  float: left;
+  padding: 15px;
+  width: 550px;
+  height: 450px;
+}
 
-@keyframes jump{
-                0%{top:150px;
-                   left:10px;}
-                20%{top:120px;
-                    left:15px;}
-                30%{top:110px;
-                    left:20px;}
-                45%{top:100px;
-                    left:25px;}
-                55%{top:100px;
-                    left:25px;}
-                70%{top:110px;
-                    left:25px;}
-                80%{top:120px;
-                    left:25px;}
-                85%{top:120px;
-                    left:25px;}
-                95%{top:150px;
-                     left:20px;}
-                100%{top:150px;
-                     left:15px;}
-                }
+#con4 {
+  text-align: left;
+  float: left;
+  padding: 15px;
+  width: 50%;
+  height: auto;
+}
 
-#block {
-        width:20px;
-        height:20px;
-        background-image:url("../img/enemy.png");
-        position:relative;
-        top:90px;
-        left:480px;
-        animation:block 1s infinite linear;
-        z-index:4;
-        }
+#con04 {
+  float: left;
+  padding: 15px;
+  width: 100%;
+  height: auto;
+}
 
-@keyframes block {
-                  0%{left:480px;}
-                  100%{left:-40px;}
-                  }
+#con5 {
+  text-align: left;
+  float: left;
+  padding: 15px;
+  width: 5%;
+  height: auto;
+}
 
-#block1 {
-        width:40px;
-        height:20px;
-        background-image:url("../img/bush.png");
-        position:relative;
-        top:110px;
-        left:480px;
-        animation:block 900ms infinite linear;
-        z-index:3;
-        }
+#img01 {
+  width: 30%;
+  float: right;
+  margin: 0px 0px 0px 0px;
+}
 
-@keyframes block1 {
-                  0%{left:480px;}
-                  100%{left:-40px;}
-                  }
+#img02 {
+  width: 50%;
+  float: right;
+  margin: 0px 0px 0px 0px;
+}
 
-#block2 {
-        width:40px;
-        height:20px;
-        background-image:url("../img/cloud.png");
-        position:relative;
-        top:-20px;
-        left:460px;
-        animation:block 1500ms infinite linear;
-        z-index:2;
-        }
+.iframe-container {
+	overflow: hidden;
+	position: relative;
+	padding-top: 100%;
+}
 
-@keyframes block2 {
-                  0%{left:480px;}
-                  100%{left:-40px;}
-                  }
+.iframe-container iframe {
+	position: relative;
+	border: 0;
+	left: 50px;
+	top: 50px;
+	height: 500px;
+	width: 550px;
+}
+
+@media (prefers-color-scheme: dark) {
+  #html {
+  background-color: #36393f;
+  color: #2d2d2d;
+  }
+
+  #titel, #by, #conhead, #con, #concon, #quote, #conlwrhead, #conlwr, #conlwr01, #con3, #con03, #con4, #con4 {
+  color: #e2e2e2;
+  }
+
+  .quote {
+  color: #e2e2e2;
+  }
+
+  h1, h2, h3, h4 {
+  color: #e2e2e2;
+  }
+
+  #nav, #navul0, #navul1, #navul2 {
+  color: #800080;
+  }
+
+  a {
+	color: #9463FF;
+	}
+
+	#btnd {
+  background-color: #d300d3;
+  color: #e2e2e2;
+	}
+
+	#btnd:hover {
+  background-color: grey;
+  color: #e2e2e2;
+	}
+
+	#btnw {
+  background-color: #d300d3;
+  color: #e2e2e2;
+	}
+
+	#btnw:hover {
+  background-color: grey;
+  color: #e2e2e2;
+	}
+}

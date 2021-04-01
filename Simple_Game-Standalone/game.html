@@ -1,35 +1,60 @@
 <!Doctype html>
-<html lang="de">
-    <head>
-        <meta charset="utf-8">
-        <link rel="icon" href="favicon.ico" type="image/x-icon">
-        <link rel="stylesheet" href="css/style.css" type="text/css">
-        <title>
-            Simple Game
-        </title>
-    </head>
-    <body>
-        <div>
-            <h1 align="center">Simple Game</h1>
-            <h4 id="by" align="center">by David Brückhändler</h4>
-        </div>
+<html id="html" lang="de">
 
-        <div>
-            <p>
-                !Updates will come!<br>
-                How to play:<br>
-                1. Click in the Box to jump<br>
-                2. Blue is an obstacle you have to avoid<br>
-                3. If you lose press F5 to restart<br>
-            </p>
-            <div id="counter"></div>
-            <div id="game" onclick="jump()">
-                <div id="character"></div>
-                <div id="block2"></div>
-                <div id="block1"></div>
-                <div id="block"></div>
-            </div>
-        </div>
-        <script src="js/game.js"></script>
-    </body>
+<head>
+  <meta charset="utf-8">
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+	<link rel="stylesheet" href="css/style.css" type="text/css">
+	<link rel="stylesheet" href="css/game.css" type="text/css">
+  <title>metl_dev</title>
+	<script src="https://cdn.jsdelivr.net/npm/@widgetbot/crate@3" async="true" defer="true">
+    new Crate({
+    server: '763044232671526922', // MPD (metl_play development)
+    channel: '763044235049173076', // #allgemein
+    location: ['bottom', 'right'],
+    glyph: ['img/f7d78d0c7e6522ed296bfa315b3a1969.png', '100%'],
+    defer: true
+    })
+	</script>
+</head>
+
+<body>
+  <div>
+    <h1 id="title" align="center">Simple Game</h1>
+    <h4 id="by" align="center">by David Brückhändler</h4>
+  </div>
+
+  <nav id="nav">
+    <ul>
+      <a href="html/kontakt/credits.html"><li>Credits</li></a>
+	    <a href="html/kontakt/kontakt.html"><li>Kontakt</li></a>
+    </ul>
+  </nav><br>
+
+  <div id="con5"></div>
+  <div id="con03">
+	  <h1 id="conhead">Simple Game</h1>
+	  <h3>Credits</h3>
+	  <h4>Sounds</h4>
+	  <p>
+		  Some used sounds in this Game are from <a href="https://www.minecraft.net">Minecraft</a> and belong to Mojang.<br>
+		  This Game is not an offical product by Mojang!
+	  </p>
+    <div id="startbtn"><button>Start Game</button></div>
+    <div id="counter">Score</div>
+    <div id="game" onclick="jump()" src="textures/background01.jpg">
+      <div id="character"><img src="textures/character01.png"></div>
+      <div id="block2" style="display: none;"><img src="textures/cloud01.png"></div>
+      <div id="block1" style="display: none;"><img src="textures/bush01.png"></div>
+      <div id="block" style="display: none;"><img src="textures/enemy01.png"></div>
+    </div>
+  </div>
+  <script src="js/start.js" defer></script> <!--Start the game by clicking on start-->
+  <script src="js/game.js" defer></script> <!--function will get called by start.js and don't start by it self-->
+  <script src="js/sound.js" defer></script><!--function will get called by game.js and don't start by it self-->
+  <div id="con4" class="iframe-container">
+	  <iframe loading="lazy" src="html/metl/tutorial.html"></iframe>
+  </div>
+</body>
+
 </html>
