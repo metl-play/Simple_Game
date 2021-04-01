@@ -74,4 +74,3 @@ var checkDead = setInterval(function() {
 },10);
 
 img.src = 'textures/character01.png';
-//Simple Game Textures made by https://www.youtube.com/channel/UC5fF703FjcwwxauExxyCYSA and edited by metl_play.
